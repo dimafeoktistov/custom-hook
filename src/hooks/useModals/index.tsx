@@ -21,7 +21,7 @@ const useModals = (
 ) => {
   const [modalsProps, setModalsProps] = useState<ModalProps[]>([]);
   const closeModal = (id: string): void => {
-    setModalsProps(modalsProps.filter((mProp) => mProp.id !== id));
+    setModalsProps(modalsProps.filter((mProp: ModalProps) => mProp.id !== id));
   };
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const useModals = (
     };
     window.addEventListener("keyup", handleKeyUp);
     return () => window.removeEventListener("keyup", handleKeyUp);
-  }, [modalsProps]);
+  });
 
   const createModal = (): void => {
     const id = uuidv4();
@@ -50,7 +50,7 @@ const useModals = (
   const Modals: React.FC = () => {
     return (
       <div className="modals">
-        {modalsProps.map((modalProp) => (
+        {modalsProps.map((modalProp: ModalProps) => (
           <Modal {...modalProp} closeModal={closeModal} key={modalProp.id} />
         ))}
       </div>

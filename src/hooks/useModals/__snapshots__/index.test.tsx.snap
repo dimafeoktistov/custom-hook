@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders without mistakes matches snapshot 1`] = `
+<div
+  className="modal"
+>
+  <button
+    className="close-button"
+    id="123"
+    onClick={[Function]}
+    type="button"
+  >
+    X
+  </button>
+  <div>
+    123
+  </div>
+  <div>
+    <button
+      className="callback-button"
+      onClick={[Function]}
+    >
+      выполнить колбек
+    </button>
+  </div>
+</div>
+`;

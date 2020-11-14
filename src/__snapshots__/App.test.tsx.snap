@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders without mistakes matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <button
+    className="open-button"
+    onClick={[Function]}
+  >
+    Создать окно
+  </button>
+  <div
+    className="modals"
+  />
+</div>
+`;
